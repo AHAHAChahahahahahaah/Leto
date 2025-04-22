@@ -30,6 +30,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Команда /days
 async def days(update: Update, context: ContextTypes.DEFAULT_TYPE):
+   chat_id = update.message.chat_id
     days = days_until_summer()
     await update.message.reply_text(f'До начала лета осталось {days} дней!')
 
